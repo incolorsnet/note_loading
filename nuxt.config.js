@@ -1,6 +1,6 @@
 const routerBaseFunc = () => {
   if (process.env.DEPLOY_ENV === 'GH_PAGES') {
-    var path = '/note_nuxt/'
+    var path = '/note_loading/'
   } else if (process.env.DEPLOY_ENV === 'PROD') {
     var path = '/'
   } else {
