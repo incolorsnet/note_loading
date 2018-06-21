@@ -1,0 +1,24 @@
+@import "inc/component/c_inner";
+@import "inc/component/c_heading";
+@import "inc/component/c_btn";
+@import "inc/component/c_arr";
+@import "inc/component/c_col";
+
+.c_text {
+  &, p {
+    @include pc {
+      line-height: (48/28);
+    }
+    font-size: rem(14);
+    line-height: 1.6;
+    word-wrap: break-word;
+
+    &.p, p {
+      margin: 0 0 15px;
+    }
+
+    &.p:last-child, p:last-child {
+      margin: 0;
+    }
+  }
+}

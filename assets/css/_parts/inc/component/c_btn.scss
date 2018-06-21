@@ -1,0 +1,35 @@
+.c_btn_basic {
+  @include pc {
+    min-width: rem(140);
+    padding: rem(4) rem(9);
+  }
+  min-width: rem(200);
+  border-radius: rem(30);
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+  padding: rem(9) rem(10);
+  line-height: 1;
+
+  &-text {
+    font-size: rem(14);
+    font-weight: bold;
+    line-height: 1.6;
+  }
+
+  &-bd {
+    &, &:hover {
+      color: $palet4;
+      border: 2px solid;
+      transition: all .3s ease;
+    }
+
+    @include pc {
+      &:hover {
+        color: #fff;
+        background: $palet4;
+        border-color: $palet4;
+      }
+    }
+  }
+}

@@ -1,0 +1,115 @@
+// PC: パソコン, TB: タブレット, SP: スマートフォン
+$max_l: 1680;
+// $max_m: 768;
+$max_s: 414;
+
+$min_l: 1024;
+$min_s: 375;
+$min_l_navi: 1150;
+$rem: 14;
+$fs: 1 / $rem * 1rem;
+
+// ブレークポイント - max-widthの値で指定
+// $bp-s: 719;
+$bp_m: 768;
+$bp_l: $bp_m + 1;
+
+// フォント
+$color: #000;
+$bg: false;
+$a: $color;
+$hover: $a;
+
+$fo_yugo: false;
+$fo_webfont: false;
+$fo_webfont2: $fo_webfont;
+$fo_google: 'Encode Sans Condensed', sans-serif;
+
+// カラー
+$palet1: #f0861d;        // orange
+$palet2: #e94d57;        // red
+$palet3: #f5ede3;        // light orange
+$palet4: #00bbe0;        // blue
+
+$palet5: #4c4c4c;        // gray
+$palet6: #22beb1;        // green
+
+$dsw_s: 1242;
+$dsw_l: 2800;
+
+// letter-spacing
+$ltsp: .2em;
+
+@if $fo_webfont != false {
+  @font-face  {
+    font-family: $fo_webfont;
+    src: url("~assets/font/#{$fo_webfont}.woff") format("woff"), url("~assets/font/#{$fo_webfont}.woff2") format("woff2");
+  }
+}
+
+@if $fo_webfont2 != false {
+  @font-face  {
+    font-family: $fo_webfont;
+    src: url("~assets/font/#{$fo_webfont}.woff") format("woff"), url("~assets/font/#{$fo_webfont}.woff2") format("woff2");
+  }
+}
+
+@if $fo_yugo == true {
+  @font-face  {
+    font-family: "Yu Gothic";
+    src: local("Yu Gothic Medium");
+    font-weight: 100;
+  }
+  @font-face  {
+    font-family: "Yu Gothic";
+    src: local("Yu Gothic Medium");
+    font-weight: 200;
+  }
+  @font-face  {
+    font-family: "Yu Gothic";
+    src: local("Yu Gothic Medium");
+    font-weight: 300;
+  }
+  @font-face  {
+    font-family: "Yu Gothic";
+    src: local("Yu Gothic Medium");
+    font-weight: 400;
+  }
+}
+
+// font-family
+@mixin fo_kakugo() {
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ ゴシック", "MS Gothic", sans-serif;
+}
+
+@mixin fo_yugo() {
+  font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, sans-serif
+}
+
+@mixin fo_device() {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Droid Sans, Helvetica Neue, Hiragino Kaku Gothic ProN, Meiryo, sans-serif;
+}
+
+@mixin fo_yumin() {
+  font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+}
+
+@mixin fo_cus() {
+  font-family: "#{$fo_webfont}", sans-serif;
+}
+
+@mixin fo_cus2() {
+  font-family: "#{$fo_webfont2}", sans-serif;
+}
+
+@mixin fo_google() {
+  font-family: #{$fo_google};
+}
+
+@mixin fo_def () {
+  @if $fo_yugo {
+    @include fo_yugo();
+  } @else {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Droid Sans, Helvetica Neue, Hiragino Kaku Gothic ProN, Meiryo, sans-serif;
+  }
+}

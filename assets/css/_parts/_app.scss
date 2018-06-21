@@ -1,0 +1,157 @@
+// .fade_in {
+//   opacity: 0;
+//   transform: scale(1.02) translateY(0);
+//   transition: all .5s linear;
+//
+//   &-ec {
+//     opacity: 0;
+//     transform: scale(1.02) translateY(0);
+//     transition: all .5s linear;
+//   }
+//
+//   &-y {
+//     opacity: 0;
+//     transform: scale(1) translateY(30px);
+//     transition: all .5s linear 1s;
+//   }
+// }
+//
+// .fade_expand {
+//   &-opacity {
+//     opacity: 0;
+//     transition: all 1s ease;
+//   }
+//
+//   &-expand {
+//     width: 0;
+//     height: 100%;
+//     overflow: hidden;
+//     position: absolute;
+//     left: 0;
+//     top: 0;
+//     display: block;
+//     transition: all 1s ease .5s;
+//   }
+// }
+//
+// .fade_blur {
+//   filter: blur(30px);
+//   opacity: 0;
+//   backface-visibility: hidden;
+//   transition: all 1.2s ease-in-out .2s;
+//
+//   &-ec {
+//     filter: blur(30px);
+//     opacity: 0;
+//     backface-visibility: hidden;
+//     transition: all 1.5s ease-in-out;
+//   }
+// }
+//
+// .visible {
+//   &.fade_in {
+//     opacity: 1;
+//     transform: scale(1) translateY(0);
+//
+//     &-ec {
+//       opacity: 1;
+//       transform: scale(1) translateY(0);
+//     }
+//
+//     &-y {
+//       opacity: 1;
+//       transform: scale(1) translateY(0);
+//     }
+//   }
+//
+//   &.fade_expand {
+//     &-opacity {
+//       opacity: .3;
+//     }
+//
+//     &-expand {
+//       width: 100%;
+//     }
+//   }
+//
+//   &.fade_blur {
+//     filter: blur(0);
+//     opacity: 1;
+//
+//     &-ec {
+//       filter: blur(0);
+//       opacity: 1;
+//     }
+//   }
+// }
+//
+// /* SVGアニメーション */
+// .fade_svg-ol {
+//   display: block;
+//
+//   &-text {
+//     stroke: transparent;
+//     stroke-width: .5;
+//     stroke-miterlimit: .5;
+//     stroke-dasharray: 500;
+//     stroke-dashoffset: 0;
+//     fill-rule: evenodd;
+//     clip-rule: evenodd;
+//     fill: transparent;
+//   }
+//
+// }
+//
+// .fade_svg {
+//   display: block;
+//
+//   &-text {
+//     stroke: transparent;
+//     stroke-width: .5;
+//     stroke-miterlimit: .5;
+//     stroke-dasharray: 1000;
+//     stroke-dashoffset: 0;
+//     fill-rule: evenodd;
+//     clip-rule: evenodd;
+//     fill: transparent;
+//   }
+// }
+//
+// .visible {
+//   &.fade_svg-ol {
+//     .fade_svg-ol-text {
+//       fill-rule: evenodd;
+//       clip-rule: evenodd;
+//       stroke: transparent;
+//       stroke-width: .5;
+//       stroke-miterlimit: 100;
+//       stroke-dasharray: 500;
+//       stroke-dashoffset: 0;
+//     }
+//   }
+//
+//   &.fade_svg {
+//     .fade_svg-text {
+//       animation: svg_fff .8s ease-in-out forwards;
+//     }
+//   }
+// }
+//
+//
+// /* SVG専用keyframes */
+// @keyframes svg_fff {
+//   0% {
+//     stroke-dashoffset: 500;
+//     stroke: #fff;
+//     fill: transparent;
+//   }
+//   50% {
+//     stroke-dashoffset: 0;
+//     stroke: #fff;
+//     fill: transparent;
+//   }
+//   100% {
+//     fill: #fff;
+//     stroke: #fff;
+//   }
+// }

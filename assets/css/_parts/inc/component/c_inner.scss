@@ -1,0 +1,20 @@
+.c_inner {
+  @include sp {
+    @include inner("s");
+  }
+  @include pc {
+    @include inner("l");
+  }
+
+  &-sp {
+    @include sp {
+      @include inner("s");
+    }
+  }
+
+  &-pc {
+    @include pc {
+      @include inner("l");
+    }
+  }
+}

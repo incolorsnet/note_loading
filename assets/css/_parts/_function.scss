@@ -1,0 +1,110 @@
+// ブレークポイント
+@mixin mq_max($wid) {
+  @media only screen and (max-width: #{$wid}#{px}) {
+    @content;
+  }
+}
+@mixin mq_min($wid) {
+  @media only screen and (min-width: #{$wid}#{px}) {
+    @content;
+  }
+}
+@mixin mq_pc_sb {
+  @media only screen and (min-width: #{$min_l}#{px}) and (max-width: #{$max_l}#{px}) {
+    @content;
+  }
+}
+@mixin pc {
+  @media only screen and (min-width: #{$bp_l}#{px}) {
+    @content;
+  }
+}
+@mixin sp {
+  @media only screen and (max-width: #{$bp_m}#{px}) {
+    @content;
+  }
+}
+
+@mixin mq_style($pc: #{$bp_l}, $sp: #{bp_s}) {
+  @content;
+
+  @if $pc != false {
+    &-pc {
+      @include pc {
+        @content;
+      }
+    }
+  }
+
+  @if $sp != false {
+    @include sp {
+      &-sp {
+        @content;
+      }
+    }
+  }
+}
+
+// clearfix
+@mixin cf {
+  content: "";
+  clear: both;
+  height: 0;
+  visibility: hidden;
+  display: block;
+}
+
+// calc
+@function cal($a, $b) {
+  @return $a / $b * 100%;
+}
+
+// rem
+@function rem($a, $b: 1) {
+  @return $a / $b / $rem * 1rem;
+}
+
+// px
+@function px($a, $dev: 'sp') {
+  @if $dev == 'sp' {
+    @return round($a / 3 * 1px);
+  }
+  @else {
+    @return round($a / 2 * 1px);
+  }
+}
+
+// vw
+@function vw($a, $b) {
+  @return ( $a / $b ) * 100vw;
+}
+
+// c_inner
+@mixin inner($size) {
+  margin: 0 auto;
+  @if ( $size == "l" ) {
+    width: cal(2048,2300);
+    min-width: $min_l#{px};
+    max-width: $max_l#{px};
+    padding: 0 35px;
+  } @else if ( $size == "s" ) {
+    width: 100%;
+    min-width: $min_s#{px};
+    padding: 0 20px;
+  }
+}
+
+@mixin bg($from: $palet1, $to: $palet2) {
+  background-image: linear-gradient(to right, rgba($from, 1), rgba($to, 1));
+  background-attachment: fixed;
+}
+
+@mixin txtgr($from: $palet1, $to: $palet2) {
+  background-image: linear-gradient(to right, rgba($from, 1), rgba($to, 1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin hover () {
+  opacity: .7;
+}

@@ -1,0 +1,36 @@
+{
+  "name": "note_nuxt",
+  "version": "1.0.0",
+  "description": "Nuxt.js project",
+  "author": "yuuki takahashi <contact.me@in-colors.net>",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint"
+  },
+  "dependencies": {
+    "nuxt": "^1.0.0"
+  },
+  "devDependencies": {
+    "axios": "^0.18.0",
+    "babel-eslint": "^8.2.1",
+    "coffee-loader": "^0.9.0",
+    "coffeescript": "^2.3.1",
+    "eslint": "^4.15.0",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-vue": "^4.0.0",
+    "gsap": "^2.0.1",
+    "imagesloaded": "^4.1.4",
+    "node-sass": "^4.9.0",
+    "nuxt-sass-resources-loader": "^2.0.2",
+    "pug": "^2.0.0-beta6",
+    "pug-loader": "^2.4.0",
+    "sass-loader": "^7.0.3",
+    "waypoints": "^4.0.1"
+  }
+}

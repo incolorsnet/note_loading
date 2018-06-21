@@ -1,0 +1,124 @@
+/* ページ遷移アニメーション */
+.p_doors {
+  @include pc {
+    min-width: $min_l#{px};
+  }
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  // opacity: .7;
+
+  &-base {
+    opacity: .3;
+  }
+
+  &-expand {
+    width: 0;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+    display: block;
+    position: absolute;
+  }
+
+  &-bar {
+    @include pc {
+      font-size: rem(30,2);
+      margin: rem(48,2) 0 0;
+    }
+    @include mq_max($min_s) {
+      font-size: rem(13);
+      margin: rem(35) 0 0;
+    }
+    @include fo_google();
+    color: #fff;
+    font-size: rem(13);
+    margin: vw(70,750) 0 0;
+
+    &-text {
+    }
+  }
+  // &-transition-top{
+  // }
+  //
+  // &-transition-bottom {
+  // }
+  //
+  // &-transition {
+  //   &-bg {
+  //     width: 0;
+  //     height: 1px;
+  //     position: fixed;
+  //     left: 0;
+  //     top: 0;
+  //     bottom: 0;
+  //     margin: auto;
+  //     background: rgba(#fff, .5);
+  //     z-index: 1000;
+  //   }
+  //   &-top {
+  //     width: 100%;
+  //     height: 50%;
+  //     top: 0;
+  //     left: 0;
+  //     position: fixed;
+  //     background: #54A279;
+  //     z-index: 1000;
+  //     // opacity: .5;
+  //   }
+  //   &-bottom {
+  //     @extend .p_doors-transition-top;
+  //     top: auto;
+  //     bottom: 0;
+  //   }
+  // }
+  // .loader-svg {
+  //   width: 100%;
+  //   height: 100%;
+  //   position: fixed;
+  //   left: 0;
+  //   top: 0;
+  //   // opacity: .5;
+  //   z-index: 1000;
+  //   filter: blur(3px);
+  // }
+
+  // .test-svg {
+  //   opacity: 1 !important;
+  //   visibility: visible !important;
+  // }
+
+  // .loader-logo {
+  //   width: 100%;
+  //   height: rem(143);
+  //   position: absolute;
+  //   left: 0;
+  //   top: 0;
+  //   bottom: 0;
+  //   right: 0;
+  //   margin: auto;
+  //   text-align: center;
+  //
+  //   .-small {
+  //     @include pc {
+  //       font-size: rem(60,2);
+  //     }
+  //     color: #fff;
+  //     font-weight: bold;
+  //     font-size: vw(55,$dsw_s);
+  //   }
+  //
+  //   .-text {
+  //     @include pc {
+  //       font-size: rem(120,2);
+  //     }
+  //     @include fo_google();
+  //     color: #fff;
+  //     letter-spacing: rem(8,2);
+  //     font-size: vw(100,$dsw_s);
+  //   }
+  // }
+}

@@ -1,0 +1,29 @@
+html.overflow {
+  overflow: hidden;
+  max-height: 100vh;
+}
+
+.l_container {
+  @include pc {
+    min-width: $min_l#{px};
+  }
+  width: 100%;
+  min-width: $min_s#{px};
+  min-height: 100%;
+  margin: 0 auto;
+  position: relative;
+  // overflow-x: hidden;
+
+  &::after {
+    @include cf();
+  }
+}
+
+.l_contents {
+  @include sp {
+  }
+}
+
+.main {
+  position: relative;
+}

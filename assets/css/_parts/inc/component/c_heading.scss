@@ -1,0 +1,19 @@
+.c_heading1 {
+  text-align: center;
+  &-icn {
+    width: rem(50);
+    display: inline-block;
+    line-height: 0;
+  }
+  &-text {
+    @include pc {
+      font-size: rem(34,2);
+      margin: rem(15) 0 0;
+    }
+    @include fo_google();
+    letter-spacing: $ltsp;
+    font-weight: bold;
+    font-feature-settings: "palt";
+    display: block;
+  }
+}
