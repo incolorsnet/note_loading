@@ -2,7 +2,7 @@
 div
   fade
     .c_inner
-      pre._fade.fade_in.scale content
+      .block._fade.fade_in.scale(v-for="key in 10") content
 </template>
 
 <script>
@@ -23,6 +23,11 @@ export default {
 </script>
 
 <style scoped>
+.block {
+  text-align: center;
+  padding: 60px 0;
+}
+
 .container {
   min-height: 100vh;
   display: flex;

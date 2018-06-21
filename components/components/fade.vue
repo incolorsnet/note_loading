@@ -18,6 +18,13 @@ export default {
   components: {
     loading
   },
+  watch: {
+    '$store.state.isLoading' () {
+      if (!this.$store.state.isLoading) {
+        this.waypoint()
+      }
+    },
+  },
   computed: {
     storeLoading () {
       if (!this.$store.state.isLoading) {
