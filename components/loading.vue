@@ -4,7 +4,7 @@
     div.p_progress-door.p_progress-door-bottom(ref="bottom")
     div.p_progress-inner(ref="logo")
       div.p_progress-logo
-        p {{progressNowCount}}
+        p {{progressNowCount}} %
       div.p_progress-bar
         div.-bar(v-bind:style="{width: progressNowPosition + '%'}")
 </template>
@@ -137,7 +137,7 @@ export default {
   z-index: 1000;
   left: 0;
   top: 0;
-  opacity: .3;
+  // opacity: .3;
 
   &-door {
     width: 100%;
@@ -184,20 +184,23 @@ export default {
   }
 
   &-logo {
+    color: #fff;
+    text-align: center;
     width: rem(68);
+    font-weight: bold;
   }
 
   &-bar {
     width: 100%;
     height: 3px;
-    background: #e0dede;
+    background: #2dc7ac;
     position: relative;
     margin: rem(45) 0 0;
 
     .-bar {
       width: 0;
       height: 100%;
-      background: #231815;
+      background: #fff;
       position: absolute;
       left: 0;
       top: 0;
